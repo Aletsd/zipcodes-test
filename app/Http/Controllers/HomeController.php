@@ -41,7 +41,7 @@ class HomeController extends Controller
 
             foreach ($locality?->settlements as $settlement) {
                 $settlements[]  = [
-                    "key" => $settlement->key,
+                    "key" => intval($settlement->key),
                     "name" => $settlement->name,
                     "zone_type" => $settlement->zone_type,
                     "settlement_type" => array(
